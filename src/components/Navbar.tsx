@@ -4,10 +4,10 @@ import { ThemeContext } from "../App";
 
 const Navbar = () =>{
    const context = useContext(ThemeContext);
-   const {setCurrency, setMode} = context || {};
+   const {mode, setCurrency, setMode} = context || {};
 
    return (
-      <div className="d-flex justify-content-between align-items-center p-3 bg-orange">
+      <div className={`d-flex justify-content-between align-items-center p-3 ${mode === 0? "bg-orange":"bg-black"}`}>
          <div>
             <h1>Crypto Dashboard</h1>
          </div>

@@ -3,6 +3,11 @@
   color: #fff;
 }
 
+.bg-black {
+  background-color: black;
+  color: #fff;
+}
+
 .dropdown button {
    border: 1px solid white;
    color: white;
@@ -13,4 +18,8 @@
    background-color: darkorange;
    border-color: lightgray;
    color: lightgray;
+}
+
+.bg-black .dropdown button:hover {
+   background-color: black;
 }
