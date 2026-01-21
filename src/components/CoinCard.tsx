@@ -25,7 +25,7 @@ const CoinCard = ({ data }: CoinCardProps) => {
    }
 
    return (
-      <div className="card mb-2" style={{width: '10rem'}} ref={cardRef} onMouseEnter={() => mouseEnterHandle()} onMouseLeave={() => mouseLeaveHandle()}>
+      <div className="card mb-2" style={{width: '10rem', cursor: "pointer"}} ref={cardRef} onMouseEnter={() => mouseEnterHandle()} onMouseLeave={() => mouseLeaveHandle()}>
          <img className="card-img-top p-3" src={data.image} alt={data.name} draggable={false}/>
          <div className="card-body border-top">
             <h5 className="card-title">{data.name}</h5>

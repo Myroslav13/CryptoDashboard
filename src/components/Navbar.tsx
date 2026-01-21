@@ -20,7 +20,7 @@ const Navbar = () =>{
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                >
-                  Виберіть валюту
+                  Choose currency
                </button>
                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <li>
@@ -49,17 +49,17 @@ const Navbar = () =>{
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                >
-                  Виберіть режим
+                  Choose style mode
                </button>
                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <li>
                      <a className="dropdown-item" href="#" onClick={() => setMode?.(0)}>
-                        Світлий
+                        Light
                      </a>
                   </li>
                   <li>
                      <a className="dropdown-item" href="#" onClick={() => setMode?.(1)}>
-                        Темний
+                        Dark
                      </a>
                   </li>
                </ul>

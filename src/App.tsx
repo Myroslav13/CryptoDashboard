@@ -15,7 +15,9 @@ export const ThemeContext = createContext<ContextTheme | undefined>(undefined);
 type Currency = "USD" | "EUR" | "UAH" | null;
 
 function App() {
-   const [mode, setMode] = useState<number>(0);
+   const [mode, setMode] = useState<number>(() => {
+      return Number(localStorage.getItem("mode") ?? 0)
+   });
    const [currency, setCurrency] = useState<string>(() => {
       return (localStorage.getItem("currency") as Currency) ?? "USD";
    });
@@ -23,6 +25,10 @@ function App() {
    useEffect(() => {
       localStorage.setItem("currency", currency);
    }, [currency]);
+
+   useEffect(() => {
+      localStorage.setItem("mode", mode.toString());
+   }, [mode]);
 
    return (
       <>
